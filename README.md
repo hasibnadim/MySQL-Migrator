@@ -12,6 +12,3 @@ This library offers a robust framework for managing database schema evolution in
 
 - Features file: Each migration represents a well-defined change to the database structure, promoting clarity and maintainability.
 
-## Production Use
-> CMD: 
-## Development setup
