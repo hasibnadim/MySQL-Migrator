@@ -1,0 +1,40 @@
+{
+  "name": "sql-migrator",
+  "version": "1.0.0",
+  "description": "Database version control system",
+  "main": "build/main.js",
+  "scripts": {
+    "start": "node build/main.js",
+    "build": "tsc ",
+    "build:pkg":"npm run build && pnpm prune --prod && pkg . && pnpm install"
+  },
+  "keywords": [
+    "SQL"
+  ],
+  "bin": "build/main.js",
+  "pkg": {
+    "outputPath": "dist", 
+    "assets": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "targets": [
+      "node14-linux-x64",
+      "node14-macos-x64",
+      "node14-win-x64"
+    ]
+  },
+  "author": "MD Hasib Nadim",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^20.12.12",  
+    "pkg": "^5.8.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql": "^2.18.1",
+    "pg-minify": "^1.6.4"
+  }
+}
